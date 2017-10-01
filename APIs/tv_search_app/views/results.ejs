@@ -2,11 +2,11 @@
 
 <ul>
 	<% data.forEach(function(tv){ %> 
-	<li> <strong><%= tv["show"]["name"] %></strong>
-	 - <%= tv["show"]["runtime"] %>
-	  </li>
+	<li> 
+		<strong><%= tv["show"]["name"] %></strong>
+		 - <%= tv["show"]["runtime"] %>
+	 </li>
 <% }); %>
 </ul>
-
 
 <a href="/">Search Again?</a>
