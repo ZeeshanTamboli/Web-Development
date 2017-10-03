@@ -26,7 +26,7 @@ app.get("/repeat/:message/:times", function(req, res) {
 		result += message + " ";
 	}
 	res.send(result);  //res.send can run only ONE time, so we cannot put it in for loop
-});	
+});
 
 app.get("*", function(req, res) {
 	res.send("Sorry, page not found...What are you doing with your life?");
