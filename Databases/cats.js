@@ -4,12 +4,14 @@ mongoose.connect("mongodb://localhost:27017/cat_app", {
   useMongoClient: true,
 });
 
-var catSchema = new mongoose.Schema({ //pattern
+//pattern
+var catSchema = new mongoose.Schema({
   name: String,
   age: Number,
   temperament: String
 });
 
+//catSchema compiles it into a model which has an object with a bunch of methods which we can use
 var Cat = mongoose.model("Cat", catSchema);
 
 // //adding a new cat to the database
@@ -37,7 +39,7 @@ Cat.create({
     console.log(err);
   } else {
     console.log(cat);
-  } 
+  }
 });
 
 //retrieve all cats from the database and console.log each one
